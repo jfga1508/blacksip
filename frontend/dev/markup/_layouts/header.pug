@@ -1,0 +1,30 @@
+header
+  .container
+    .labels
+      .labels-1
+        |Envío gratis x compra
+      br
+      .labels-2
+        |Superior a $150.000
+    .nav-sub.mt-3
+      .nav-sub--labels
+        button.navbar-toggler(type='button', onclick='menu_toggle()')
+          span.navbar-toggler-icon
+      .nav-sub--logo
+        a(href="#")
+          img(src=images+"logo.jpg", width="115")
+      .nav-sub--nav
+        ul
+          li.nav-sub--tienda
+            a(href="#")
+              i.fas.fa-map-marker-alt.mr-2
+              span Tiendas
+          li.nav-sub--deseos
+            a(href="#")
+              i.far.fa-heart.mr-2
+              span Lista de deseos
+          li.nav-sub--bolsa
+            a(href="#")
+              i.fas.fa-shopping-bag.mr-2
+              span Mi bolsa
+    include ../_components/navigation

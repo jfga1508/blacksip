@@ -1,0 +1,66 @@
+*::focus
+  outline: none !important
+
+*::-webkit-input-placeholder
+  color: $color_black !important
+
+*:-ms-input-placeholder
+  color: $color_black !important
+
+*::placeholder
+  color: $color_black !important
+
+body
+  font-family: "UniversLTW01-57Condense_723821"
+  font-size: 14px
+  margin: 0 0.5rem
+
+h1
+  font-size: 40px
+  font-family: "UniversLTW01-67BoldCn"
+
+  +md
+    font-size: 100px
+
+h2
+  font-size: 16px
+  font-family: "UniversLTW01-57Condense_723821"
+  margin: 0
+  text-transform: uppercase
+
+  +lg
+    font-size: 20px
+
+p
+  line-height: 1
+
+a
+  color: $color_gray_dark
+  text-decoration: none
+  transition: all 0.3s
+
+  &:hover
+    color: $color_red
+
+.container
+  max-width: $max-width
+  margin: auto
+
+.text
+  +color-modifiers($text-colors)
+
+.image
+  &-fill
+    object-fit: fill
+
+  &-contain
+    object-fit: contain
+
+  &-cover
+    object-fit: cover
+
+  &-scale-down
+    object-fit: scale-down
+
+  &-none
+    object-fit: none

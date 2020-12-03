@@ -1,0 +1,215 @@
+.labels
+  display: flex
+  justify-content: space-between
+  margin-left: -0.5rem
+  margin-right: -0.5rem
+
+  +lg
+    display: block
+    position: absolute
+    top: 50px
+    left: 0
+    transform: rotate(-90deg)
+    text-align: right
+    margin-left: 0
+    margin-right: 0
+
+
+  &-1
+    background-color: $color_black
+    color: $color_white
+    padding: 0.2rem 1rem 0.3rem
+    width: 100%
+    text-align: center
+
+    +lg
+      display: inline-block
+      width: auto
+      text-align: right
+
+  &-2
+    background-color: $color_gray_dark
+    color: $color_white
+    padding: 0.2rem 1rem 0.3rem
+    width: 100%
+    text-align: center
+
+    +lg
+      display: inline-block
+      width: auto
+      text-align: right
+
+.nav
+  transition: all 0.3s
+
+  +max-lg
+    position: fixed
+    top: 0
+    bottom: 0
+    left: -70%
+    z-index: 10
+    width: 0
+    background-color: $color_white
+    border-right: 1px solid $color_black
+
+    &.toggled
+      width: 70%
+      left: 0
+
+
+  .nav-responsive-logo
+    width: 80px
+    margin-top: 1rem
+    margin-left: 1.5rem
+
+  .nav-responsive-header
+    position: relative
+    display: block
+
+    +lg
+      display: none
+
+
+    .navbar-toggler
+      font-size: 30px
+      position: absolute
+      right: 0.5rem
+      top: 0
+
+  ul#nav-list
+    list-style: none
+    padding: 0
+    text-transform: uppercase
+    text-align: left
+    font-size: 14px
+
+    +lg
+      text-align: center
+
+
+    > li
+      margin-left: 1.5rem
+      margin-bottom: 1rem
+      display: block
+
+      +lg
+        margin-left: 2.5rem
+        display: inline-block
+
+        &:first-child
+          margin-left: 0
+
+
+      ul.sub-menu
+        display: none
+        list-style: none
+        padding: 0
+        margin-top: 0.3rem
+        text-align: left
+        border: 1px $color_black solid
+        padding: 0.3rem 0.5rem
+        background-color: $color_white
+
+        +lg
+          position: absolute
+
+
+        > li
+          margin-bottom: 0.5rem
+
+          &:last-child
+            margin-bottom: 0.2rem
+
+  &-sub
+    display: flex
+    justify-content: space-between
+    padding-bottom: 1rem
+
+    &--labels
+      width: 100%
+
+    &--logo
+      text-align: center
+      width: 100%
+      max-width: 230px
+
+      img
+        width: 80px
+
+        +lg
+          width: 115px
+
+    &--tienda
+      display: none !important
+
+      span
+        display: none
+
+      +lg
+        display: inline-block !important
+
+        span
+          display: inline
+
+    &--deseos
+      span
+        display: none
+
+      +lg
+        span
+          display: inline
+
+    &--bolsa
+      span
+        display: none
+
+      +lg
+        span
+          display: inline
+
+    &--nav
+      width: 100%
+      font-size: 18px
+      display: flex
+      align-items: center
+      justify-content: flex-end
+
+      +lg
+        font-size: 14px
+
+
+      ul
+        list-style: none
+        padding: 0
+
+        li
+          margin-left: 0.5rem
+          display: inline-block
+
+          +lg
+            margin-left: 1.5rem
+
+
+          &:first-child
+            margin-left: 0
+
+.navbar-toggler
+  background: $color_white
+  border: 0
+  margin-top: 0.8rem
+
+  &:hover, &:focus
+    outline: none
+
+  &-icon
+    display: none
+    width: 2.5em
+    height: 2.5em
+    vertical-align: middle
+    content: ""
+    background: no-repeat center center
+    background-size: 100% 100%
+    background-image: url(/assets/images/hamburger.svg?color=000000)
+
+    +max-lg
+      display: inline-block

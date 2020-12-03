@@ -1,0 +1,36 @@
+{
+  "name": "Bootstrap",
+  "version": "1.0.0",
+  "description": "Basic template for project.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass"
+  },
+  "author": "Jean <jean@code-labs.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "gulp-javascript-obfuscator": "^1.1.6",
+    "jquery": ">=3.0.0",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "browser-sync": "^2.18.13",
+    "concat": "^1.0.3",
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-js-obfuscator": "^1.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "mq4-hover-shim": "^0.3.0"
+  },
+  "private": true
+}

@@ -1,0 +1,119 @@
+// Home
+.details
+  display: flex
+  flex-wrap: wrap
+
+.envio
+  width: 100%
+
+  +md
+    width: 57%
+    margin-right: 3%
+
+
+  +lg
+    width: 62%
+
+
+  &-header
+    padding: 1rem
+    border: 1px solid $color_black
+
+  &-content
+    padding: 2rem 1rem 1rem
+    border: 1px solid $color_black
+
+    .form
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+      max-width: 500px
+      justify-content: space-between
+      margin: auto
+
+      &-component
+        width: 100%
+        display: flex
+        margin-bottom: 0.5rem
+
+        +md
+          width: 49.3%
+
+      &-icon
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        color: $color_white
+        background-color: $color_black
+        width: 40px
+        height: 35px
+
+      &-input
+        border-radius: 0
+        padding: 0.2rem 1rem
+        border: 1px solid $color_black
+        width: 100%
+
+      &-success
+        color: #155724
+        background-color: #d4edda
+        border-color: #c3e6cb
+
+      &-error
+        color: #721c24
+        background-color: #f8d7da
+        border-color: #f5c6cb
+
+      &-error, &-success
+        padding: 1rem
+
+.resumen
+  width: 100%
+
+  +md
+    width: 40%
+
+
+  +lg
+    width: 35%
+
+
+  &-header
+    background-color: $color_gray
+    padding: 1rem
+    text-align: center
+    text-transform: uppercase
+
+  &-item
+    display: flex
+    justify-content: space-between
+    padding: 1rem
+    border-top: 1px solid $color_gray
+    border-left: 1px solid $color_gray
+    border-right: 1px solid $color_gray
+
+    &--image
+      margin-right: 1rem
+
+    &--name
+      margin-right: 1rem
+
+    &--price
+      font-weight: bold
+      text-align: right
+
+  &-footer
+    &--subtotal,
+    &--total
+      display: flex
+      justify-content: space-between
+      font-weight: bold
+
+    &--subtotal
+      background-color: $color_gray
+      padding: 1rem
+
+    &--total
+      background-color: $color_black
+      color: $color_white
+      padding: 1rem

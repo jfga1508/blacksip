@@ -1,0 +1,81 @@
+//- heredamos los blocks principales de nuestro template padre.
+extends ../_base/home-base
+
+//- agregamos los layouts, components, elements
+block content
+  section.content
+    .container
+      .details
+        .envio.mb-3
+          .envio-header
+            h2 Dirección de envío
+          .envio-content
+            form#form.form(action="https://blackisp.herokuapp.com/contact", method="post")
+              .form-component
+                .form-icon
+                  i.fas.fa-user
+                input.form-input#nombre(type="text", name="nombre", placeholder="Nombre", required)
+              .form-component
+                .form-icon
+                  i.fas.fa-user
+                input.form-input#apellidos(type="text", name="apellidos", placeholder="Apellidos", required)
+              .form-component
+                .form-icon
+                  i.fas.fa-envelope
+                input.form-input#email(type="email", name="email", placeholder="Correo Electrónico", required)
+              .form-component
+                .form-icon
+                  i.fas.fa-phone-alt
+                input.form-input#nombre(type="text", name="nombre", placeholder="Número de teléfono")
+              .form-component
+                .form-icon
+                  i.fas.fa-map-marker-alt
+                input.form-input#zip(type="text", name="zip", placeholder="Código postal")
+              .form-component
+                .form-icon
+                  i.fas.fa-map-marker-alt
+                input.form-input#colonies(type="text", name="colonies", placeholder="Colonia")
+              .form-component
+                .form-icon
+                  i.fas.fa-map-marker-alt
+                input.form-input#state(type="text", name="state", placeholder="Estado/Región")
+              .form-component
+                .form-icon
+                  i.fas.fa-map-marker-alt
+                input.form-input#city(type="text", name="city", placeholder="Ciudad")
+              .form-component
+                .form-icon
+                  i.fas.fa-map-marker-alt
+                input.form-input#town(type="text", name="town", placeholder="Delegación o municipio")
+              .form-component
+                .form-icon
+                  i.fas.fa-map-marked-alt
+                input.form-input#street(type="text", name="street", placeholder="Calle")
+              .form-footer
+                button.button.button-black(type="button") Libreta de direcciones
+                button.button.button-black(type="submit") Guardar
+                p
+                  input(type="checkbox")
+                  |Utilizar como dirección de facturación.
+                p.form-success(style="display:none;")
+                  |El formulario fue enviado.
+                p.form-error(style="display:none;")
+                  |El formulario no se pudo enviar.
+
+        .resumen
+          .resumen-header
+            h2 Resumen de la orden
+          .resumen-content#resumen-items
+          .resumen-footer
+            .resumen-footer--subtotal
+              div
+                |SUBTOTAL
+                br
+                |ENVÍO
+              div.text-right
+                span#resumen-subtotal
+                br
+                span A calcular
+            .resumen-footer--total
+              span TOTAL
+              span.text-right#resumen-total
